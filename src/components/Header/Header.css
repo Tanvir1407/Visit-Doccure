@@ -12,12 +12,16 @@
     padding: 0 15px;
 }
 .header-btn{
-    font-size: 20px;
     padding: 10px 18px;
     background-color: #EE344E;
-    color: white;
     border-radius: 5px;
     border: none;
+}
+.header-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
 }
 .header-btn:hover{
     background-color: #0168B3;
