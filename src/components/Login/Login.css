@@ -6,7 +6,7 @@
     border-radius: 10px;
     margin: 0 auto;
 }
-.login-container input {
+.login-container .login-input ,.submit-btn {
     height: 50px;
     width: 96%;
     padding-left: 7px;
@@ -25,14 +25,13 @@
     color: #ffffff;
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
     border: none;
 }
 .submit-btn:hover{
     transition: .4s;
     background-color: #0168b3;
 }
-.login-container p{
+.login-container .or-option{
     color: #DEDEDE;
     width: 99%;
     text-align: center;
@@ -47,8 +46,9 @@
 .social-media-btn{
     display: flex;
     justify-content: center;
+    
 }
-.btn-1{
+.btn-facebook{
     cursor: pointer;
     color: #ffffff;
     background-color: #3b5998;
@@ -56,8 +56,9 @@
     padding: 10px 30px;
     margin: 4px;
     border-radius: 4px;
+    width: 50%;
 }
-.btn-2{
+.btn-google{
     cursor: pointer;
     margin: 4px;
     color: #ffffff;
@@ -65,4 +66,12 @@
     border: none;
     padding: 10px 30px;
     border-radius: 4px;
+    width: 50%;
+}
+.register-link{
+    text-align: center;
+}
+.register-link a{
+    text-decoration: none;
+    color: #ee344e;
 }

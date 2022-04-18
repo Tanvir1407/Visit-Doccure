@@ -17,7 +17,7 @@ const Appointment = () => {
           </div>
           <div>
             <input type="tel" name="" id="" placeholder="Phone Number" />
-            <input className="submit-btn" type="submit" value="Submit" />
+            <input className="appoinment-btn" type="submit" value="Submit" />
           </div>
         </div>
       </div>

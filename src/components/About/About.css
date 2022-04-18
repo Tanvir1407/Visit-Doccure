@@ -1,0 +1,49 @@
+.about-container{
+    margin: 50px;
+}
+.about-container > h1{
+    text-align: center;
+    border-bottom: 2px solid #ee344e;
+     width: 170px;
+     margin: 0 auto;
+    
+
+}
+.about-img{
+    height: 600px;
+    width: 500px;
+    margin:0px 50px;
+    box-shadow: 10px 10px #ee344e;
+}
+.about-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.about-text >h1{
+    font-size: 45px;
+    color: #ee344e;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0px;
+}
+.about-text >h4{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.about-text >p{
+    font-size: 18px;
+    font-weight: 500;
+    color: gray;
+    font-family: Verdana,  Tahoma, sans-serif;
+    line-height: 1.6;
+}
+ q{
+    font-size: 17px;
+    color: rgb(56, 55, 55);
+    font-weight: 600;
+
+}
+.author{
+    font-size: 16px;
+    color: gray;
+}
