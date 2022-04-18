@@ -1,0 +1,26 @@
+.card-container{
+    padding: 50px;
+    display:flex;
+    justify-content: space-around;
+    background-color: #fff5f5;
+    
+}
+.service-container{
+    background-color: #fff5f5;
+}
+.service-text{
+    text-align: center;
+
+}
+.service-text h1{
+    margin: 0;
+    padding-top: 70px;
+    color: #0168b3;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.service-text p {
+    color: rgb(84, 84, 84);
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}

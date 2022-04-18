@@ -1,0 +1,23 @@
+[
+  {
+    "id": "625cd1e867210a8590603436",
+    "balance": "$93.66",
+    "picture": "https://i.ibb.co/7rdGKLc/solution1.png",
+    "name": "Heart Surgery",
+    "about": "HCG is equipped with Cardiovascular expert team. Book your appointment today! HCG well equipped and leading Cardiovascular Hospital in India."
+  },
+  {
+    "id": "625cd1e8bca9ba9669707180",
+    "balance": "$88.23",
+    "picture": "https://i.ibb.co/0Cvnj4R/solution3.png",
+    "name": "Children's services",
+    "about": "Leads child care and intervention, early childhood development, foster and kinship care, adoption, and improvements for children and youth."
+  },
+  {
+    "id": "625cd1e839b69c0eb7a5cd6e",
+    "balance": "$67.44",
+    "picture": "https://i.ibb.co/JmdtYVw/solution2.png",
+    "name": "Valve Diseases",
+    "about": "Heart valve disease occurs when your heart's valves do not work correctly. Common causes of valve disease include rheumatic fever."
+  }
+]
