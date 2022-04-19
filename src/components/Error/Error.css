@@ -1,0 +1,22 @@
+.error-icon {
+    margin: 0 auto;
+    width: 300px;
+}
+.error-heading{
+    text-align: center;
+}
+.error-icon i{
+    font-size: 300px;
+    color: #ee433b;
+}
+.go-home-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: 2px solid #ee433b;
+}
+.go-home-btn a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ee433b;
+}

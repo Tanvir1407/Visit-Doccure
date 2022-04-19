@@ -14,7 +14,6 @@ const Header = () => {
         <Link to="/checkout">Checkout</Link>
         <Link to="/blog">Blog</Link>
         <Link to='/about'>About</Link>
-        <Link to="/login">Login</Link>
       </div>
       <div>
         <button className="header-btn">
