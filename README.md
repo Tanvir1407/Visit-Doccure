@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# The Website belongs to a doctor who provides various services here 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,7 +9,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Framework
 * Firebase 
 
-In the project directory, you can run:
+## All the features that have been added to the website
+* Home page has three sections (appointment , services, footer )
+* SignIn functionality for the user 
+* User Email verification functionality 
+* Reset Password Functionality
+* User will not be able to go to the Checkout page without logIn
 
 ### `npm start`
 
