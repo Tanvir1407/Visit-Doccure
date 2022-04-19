@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link,useNavigate,useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import './Login.css';
 
 const Login = () => {
@@ -9,11 +9,7 @@ const Login = () => {
   const googleSignInHandler = () => {
     signInWithGoogle()
   }
-  const [signInWithFacebook] = useSignInWithFacebook(auth);
-  const facebookSignInHandler = () => {
-    signInWithFacebook();
-  };
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user, error] =
     useSignInWithEmailAndPassword(auth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,7 +23,8 @@ const Login = () => {
   
   const handleLoginUser = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(email, password);
+
   }
   const navigate = useNavigate();
   const location = useLocation();
@@ -35,6 +32,7 @@ const Login = () => {
   if (user) {
     navigate (from, {replace:true})
   }
+  
     return (
       <div className="login-container">
         <h2>Login Doccure</h2>
@@ -60,7 +58,10 @@ const Login = () => {
             required
           />{" "}
           <br />
-          <span className="reset-password-link">Forgot password ?</span> <br />
+          <span className="reset-password-link">
+            <Link to="/reset">Forgot password ?</Link>
+          </span>{" "}
+          <br />
           <input className="submit-btn" type="submit" value="Login" />
         </form>
         <p className="or-option">

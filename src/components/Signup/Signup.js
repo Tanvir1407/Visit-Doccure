@@ -3,6 +3,7 @@ import { Link, useNavigate,useLocation} from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./Signup.css";
 import auth from '../../firebase.init';
+import { sendEmailVerification } from "firebase/auth";
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -44,7 +45,11 @@ const Signup = () => {
     }
     setError('');
     createUserWithEmailAndPassword(email, password)
-
+    sendEmailVerification(auth.currentUser)
+      .then(() => {
+      // Email verification sent!
+      // ...
+    });
   }
 
 

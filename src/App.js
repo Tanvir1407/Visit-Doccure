@@ -9,6 +9,7 @@ import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
 import Signup from './components/Signup/Signup';
 import RequareAuth from './components/RequareAuth/RequareAuth';
+import ResetPassword from './components/ResetPassword/ResetPassword';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route path='/reset' element={<ResetPassword></ResetPassword>}></Route>
         <Route path="/*" element={<Error></Error>}></Route>
       </Routes>
     </div>
