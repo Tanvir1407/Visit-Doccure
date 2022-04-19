@@ -1,6 +1,6 @@
 # The Website belongs to a doctor who provides various services here 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [Visit Doccure](https://doccure-244.netlify.app/).
 
 ## The library and framework used in this project 
 ### Library 
