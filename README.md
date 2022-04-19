@@ -2,7 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## The library and framework used in this project 
+### Library 
+* React 
+* react-firebase-hooks
+### Framework
+* Firebase 
 
 In the project directory, you can run:
 
