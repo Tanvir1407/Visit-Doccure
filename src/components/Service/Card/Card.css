@@ -20,3 +20,19 @@
     font-weight: 600;
     color: #ee344e;
 }
+.appoinment{
+    padding: 6px 20px;
+    margin: 3px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: 2px solid #ee344e;
+    background-color: #ee344e;
+}
+.appoinment:hover{
+    border: 2px solid #0168B3;
+    color: #0168B3;
+    background-color: #ffffff;
+    transition: .4s;
+}

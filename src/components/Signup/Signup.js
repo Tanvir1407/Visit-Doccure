@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate,useLocation} from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./Signup.css";
 import auth from '../../firebase.init';
@@ -9,7 +9,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate();
+
   
     const [createUserWithEmailAndPassword, user] =
       useCreateUserWithEmailAndPassword(auth);
@@ -24,9 +24,14 @@ const Signup = () => {
         setConfirmPassword(e.target.value)
   }
 
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || '/';
   if (user) {
-    navigate('/home');
+    navigate (from, {replace:true})
   }
+  
   const handleCreateUser = e => {
     e.preventDefault();
     if (password !== confirmPassword) {
@@ -52,7 +57,7 @@ const Signup = () => {
           className="login-input"
           type="email"
           name="email"
-          id=""
+          id="1"
           placeholder="Email"
           required
         />{" "}
@@ -62,7 +67,7 @@ const Signup = () => {
           className="login-input"
           type="password"
           name="password"
-          id=""
+          id="2"
           placeholder="Password"
           required
         />
@@ -73,7 +78,7 @@ const Signup = () => {
           className="login-input"
           type="password"
           name="confirm-password"
-          id=""
+          id="3"
           placeholder="Confirm Password"
           required
         />{" "}

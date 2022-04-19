@@ -6,11 +6,11 @@ const Card = (props) => {
     return (
       <div className="card">
         <img src={picture} alt="" />
-        <div className='card-text'>
+        <div className="card-text">
           <h3>{name}</h3>
-          <span className='price'>Fee: {balance}</span> <br />
+          <span className="price">Fee: {balance}</span> <br />
           <p>{about}</p>
-          <button>Appoinment</button>
+          <button className="appoinment">Appoinment</button>
         </div>
       </div>
     );

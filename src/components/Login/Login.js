@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate,useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import './Login.css';
 
 const Login = () => {
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const googleSignInHandler = () => {
+    signInWithGoogle()
+  }
+  const [signInWithFacebook] = useSignInWithFacebook(auth);
+  const facebookSignInHandler = () => {
+    signInWithFacebook();
+  };
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
@@ -22,10 +29,16 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password)
   }
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || '/';
+  if (user) {
+    navigate (from, {replace:true})
+  }
     return (
       <div className="login-container">
         <h2>Login Doccure</h2>
-        <p>{ error?.message}</p>
+        <p>{error?.message}</p>
         <form onSubmit={handleLoginUser}>
           <input
             onBlur={emailHandler}
@@ -54,11 +67,8 @@ const Login = () => {
           <span>or</span>
         </p>
         <div className="social-media-btn">
-          <button className="btn-facebook">
-            <i class="fab fa-facebook-f"></i> Login
-          </button>
-          <button className="btn-google">
-            <i class="fab fa-google"></i> Login
+          <button onClick={googleSignInHandler} className="btn-google">
+            <i class="fab fa-google"></i> Login with Google
           </button>
         </div>
         <p className="register-link">

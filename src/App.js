@@ -8,21 +8,29 @@ import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
 import Signup from './components/Signup/Signup';
+import RequareAuth from './components/RequareAuth/RequareAuth';
 
 
 function App() {
   return (
     <div>
-      <Header></Header>  
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        <Route path="/checkout" element={<Checkout></Checkout>}></Route>
+        <Route
+          path="/checkout"
+          element={
+            <RequareAuth>
+              <Checkout></Checkout>
+            </RequareAuth>
+          }
+        ></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/signup' element={<Signup></Signup>}></Route>
-        <Route path='/*' element={<Error></Error>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route path="/*" element={<Error></Error>}></Route>
       </Routes>
     </div>
   );
