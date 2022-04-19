@@ -13,12 +13,12 @@ const Header = () => {
         <Link to="/">Home</Link>
         <Link to="/checkout">Checkout</Link>
         <Link to="/blog">Blog</Link>
-        <Link to='/about'>About</Link>
+        <Link to="/about">About</Link>
       </div>
       <div>
-        <button className="header-btn">
-          <Link to="/login">LOGIN</Link>
-        </button>
+        <Link className="header-btn" to="/login">
+          LOGIN
+        </Link>
       </div>
     </div>
   );

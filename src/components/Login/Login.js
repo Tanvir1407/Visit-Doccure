@@ -1,26 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import './Login.css';
 
 const Login = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+   const emailHandler = (e) => {
+     setEmail(e.target.value);
+   };
+   const passwordHandler = (e) => {
+     setPassword(e.target.value);
+  };
+  
+  const handleLoginUser = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(email, password)
+  }
     return (
       <div className="login-container">
         <h2>Login Doccure</h2>
-        <form>
+        <p>{ error?.message}</p>
+        <form onSubmit={handleLoginUser}>
           <input
+            onBlur={emailHandler}
             className="login-input"
             type="email"
             name="email"
-            id=""
+            id="1"
             placeholder="Email"
+            required
           />{" "}
           <br />
           <input
+            onBlur={passwordHandler}
             className="login-input"
             type="password"
             name="password"
-            id=""
+            id="2"
             placeholder="Password"
+            required
           />{" "}
           <br />
           <span className="reset-password-link">Forgot password ?</span> <br />
@@ -38,7 +62,7 @@ const Login = () => {
           </button>
         </div>
         <p className="register-link">
-          Don’t have an account? <Link to='/signup'>Register</Link>
+          Don’t have an account? <Link to="/signup">Register</Link>
         </p>
       </div>
     );

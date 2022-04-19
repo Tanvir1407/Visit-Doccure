@@ -16,13 +16,12 @@
     background-color: #EE344E;
     border-radius: 5px;
     border: none;
-}
-.header-btn a{
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: 600;
 }
+
 .header-btn:hover{
     background-color: #0168B3;
 }
