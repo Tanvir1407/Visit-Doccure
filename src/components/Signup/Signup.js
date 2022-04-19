@@ -32,7 +32,11 @@ const Signup = () => {
   if (user) {
     navigate (from, {replace:true})
   }
-  
+  const sendVarificationLink = () => {
+    sendEmailVerification(auth?.currentUser)
+      .then(() => { });
+    
+  }
   const handleCreateUser = e => {
     e.preventDefault();
     if (password !== confirmPassword) {
@@ -44,12 +48,11 @@ const Signup = () => {
       return;
     }
     setError('');
-    createUserWithEmailAndPassword(email, password)
-    sendEmailVerification(auth.currentUser)
-      .then(() => {
-      // Email verification sent!
-      // ...
-    });
+    createUserWithEmailAndPassword(email, password);
+    setTimeout(() => {
+      sendVarificationLink();
+      window.alert('Open Your Mail and Verify Your Email address')
+    }, 7000);  
   }
 
 
