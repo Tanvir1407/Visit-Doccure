@@ -1,3 +1,14 @@
+@media only screen and (max-width: 480px){
+    .header {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .header-btn{
+        margin-top: 30px;
+    }
+}
+
 .header{
     display: flex;
     justify-content: space-between;

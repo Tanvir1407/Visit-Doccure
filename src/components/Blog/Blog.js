@@ -3,7 +3,7 @@ import "./Blog.css";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="blog-container">
       <div>
         <h1>deffarent with Authorization and Authentication </h1>
         <h4>Authentication</h4>
@@ -56,10 +56,23 @@ const Blog = () => {
           something you have: a token, such as bank card; something you are:
           biometrics, such as fingerprints and voice recognition.
         </p>
-          </div>
-          <div>
-              <h1>What other services does firebase provide other than authentication?</h1>
-          </div>
+      </div>
+      <div>
+        <h1>
+          What other services does firebase provide other than authentication?
+        </h1>
+        <ul>
+          <li>Cloud Firestore</li>
+          <li>Cloud Functions</li>
+          <li>Predictions</li>
+          <li> Hosting</li>
+          <li>Dynamic Links</li>
+          <li> Remote Config</li>
+          <li>Cloud Storage</li>
+          <li>Google Analytics</li>
+          <li>Cloud Messaging</li>
+        </ul>
+      </div>
     </div>
   );
 };

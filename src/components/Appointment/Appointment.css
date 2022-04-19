@@ -1,3 +1,15 @@
+@media only screen and (max-width: 480px) {
+    .appointment-pic img{
+        display: none;
+    }
+    .appointment-form-section {
+        margin:20px !important;
+    }
+    .appointment-container {
+        display: block;
+        background-color: #0168b3;
+    }
+}
 .appointment-container{
     display: flex;
     justify-content: space-between;

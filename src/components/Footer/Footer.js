@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="footer-left-side">
         <img src={"https://i.ibb.co/ggpZyPk/footer-logo.png"} alt="" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Stay at a healthy weight. Quit smoking and stay away from secondhand
+          smoke.
         </p>
         <div className="icon">
           <i class="fab fa-facebook-f"></i>
@@ -18,8 +18,8 @@ const Footer = () => {
         </div>
       </div>
 
-          <div className="footer-medel-position">
-              <h1>For Doctor</h1>
+      <div className="footer-medel-position">
+        <h1>For Doctor</h1>
         <div className="link-box">
           <i class="fas fa-angle-right"></i> <p>Blogs</p>
         </div>
@@ -30,7 +30,8 @@ const Footer = () => {
           <i class="fas fa-angle-right"></i> <p>Login</p>
         </div>
         <div className="link-box">
-          <i class="fas fa-angle-right"></i><p>Chat</p>
+          <i class="fas fa-angle-right"></i>
+          <p>Chat</p>
         </div>
       </div>
 
